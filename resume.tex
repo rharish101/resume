@@ -1,0 +1,39 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[margin=1cm]{geometry}  % for setting page margins
+\usepackage[gray]{xcolor}  % convert entire PDF to grayscale
+\usepackage{hyperref}  % control hyperlink formatting
+\usepackage{titlesec}  % for changing section styling
+\usepackage{fontawesome}  % for icons like GitHub, email, mobile, etc.
+\usepackage{tabularx}  % for custom columns having auto width
+
+% Custom styling for section
+\titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{-2mm}}[\vspace{-3mm}\hrulefill\vspace{-1mm}]
+
+% Custom environment to be used for a single project, internship, etc.
+\newenvironment{project}[4][]  % optional link is by default empty
+{
+    \textbf{#2} \hfill {\small #3}\\
+    \textit{\small #4} \hfill \href{#1}{\small #1}
+    \begin{itemize}
+}
+{
+    \end{itemize}
+}
+
+% Miscellaneous options
+\hypersetup{colorlinks=true}  % do not draw boxes around links, color the links themselves
+\pagenumbering{gobble}  % hide page numbering
+
+\title{R. Harish - Resume}
+\author{Harish Rajagopal}
+
+\begin{document}
+    \input{sections/header.tex}
+    \input{sections/qualifications.tex}
+    \input{sections/achievements.tex}
+    \input{sections/experience.tex}
+    \input{sections/projects.tex}
+    \input{sections/skills.tex}
+    \input{sections/courses.tex}
+    \input{sections/responsibilities.tex}
+\end{document}

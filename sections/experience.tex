@@ -1,0 +1,25 @@
+\section*{Internships}
+\begin{itemize}
+
+\item \begin{project}{Research Intern, NYU Tandon}{May '19 - Present}{Prof. Paweł Korus, Prof. Nasir Memon}
+    \item Project on building a robust image hash that is immune to common image transformations, while being sensitive to malicious image edits like face swaps, deep fakes, object addition/deletion, etc.
+    \item A binary hash is constructed given an image, which would give lower \textit{Hamming distances} for hashes of similar images, while giving larger distances for dissimilar images.
+    \item Various novel network architectures are tested on different loss functions, notably the triplet loss, along with \textit{mining} of examples for improved training by targeting semi-hard examples, similar to \href{https://arxiv.org/abs/1503.03832}{\textit{FaceNet}}.
+    \item The network is also tested against adversarial attack methods such as \href{https://arxiv.org/abs/1412.6572}{\textit{Fast Gradient Sign Method}}, \href{https://arxiv.org/abs/1607.02533}{\textit{Basic Iterative Method}}, \href{https://arxiv.org/abs/1706.06083}{\textit{Projected Gradient Descent}}, etc.
+\end{project}
+
+\item \begin{project}[https://github.com/rharish101/Plasticity-Networks]{Research Intern (Remote), NYU Tandon}{May '18 - July '18}{Prof. Yao Wang}
+    \item Used \href{https://arxiv.org/abs/1804.02464}{\textit{differentiable plasticity}} for \textit{domain transfer} using CNNs.
+    \item Three architectures with two variants tested on the \textit{Street View House Numbers (SVHN)} dataset: standard ResNet, ResNet with plasticity on the fully-connected layer and ResNet with plasticity on all layers, using 20 and 56 layer variants.
+    \item Modified the standard temporal update rule for the \textit{Hebbian matrix} (plastic weights) for convolutional layers by using \href{http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf}{transpose convolution} for an efficient method of obtaining the plasticity update.
+    \item Models trained on the SVHN dataset were used for the MNIST dataset by keeping the convolutional layers as feature extractors, with notable improvement in classification accuracy for the 20 layer models due to full plasticity.
+\end{project}
+
+\item \begin{project}{Intern, Machine Learning Team, New York Office of IIT Kanpur}{May '17 - July '18}{Prof. Manindra Agrawal}
+    \item Created an online document vectorization model based on the \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}} model.
+    \item Created an online clustering model using a fully-online \href{https://github.com/cloudwalkio/ddbscan}{modification of \textit{DBSCAN}} optimised for discrete data.
+    \item Created and trained a \href{https://arxiv.org/abs/1301.3781}{Word2Vec} model to compare scraped articles using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{\textit{Word Mover's Distance}}.
+    \item Trained a character recognition CNN with sliding windows for English Optical Character Recognition (OCR).
+\end{project}
+
+\end{itemize}
