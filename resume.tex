@@ -1,7 +1,7 @@
 \documentclass[10pt, a4paper]{article}
 \usepackage[margin=1cm]{geometry}  % for setting page margins
 \usepackage[gray]{xcolor}  % convert entire PDF to grayscale
-\usepackage{hyperref}  % control hyperlink formatting
+\usepackage[pdfusetitle]{hyperref}  % control hyperlink formatting and auto-add PDF metadata
 \usepackage{titlesec}  % for changing section styling
 \usepackage{fontawesome}  % for icons like GitHub, email, mobile, etc.
 \usepackage{tabularx}  % for custom columns having auto width
@@ -11,6 +11,10 @@
 \titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{-2mm}}[\vspace{-3mm}\hrulefill\vspace{-1mm}]
 
 % Custom environment to be used for a single project, internship, etc.
+% First argument is an OPTIONAL link
+% Second argument is the name of the project
+% Third argument is the date/duration
+% Fourth argument is the name of the mentor(s)
 \newenvironment{project}[4][]  % optional link is by default empty
 {
     \textbf{#2} \hfill {\small #3}\\
@@ -21,6 +25,10 @@
     \end{itemize}
 }
 % Custom command to be used for an empty listing for a single project, internship, etc.
+% First argument is an OPTIONAL link
+% Second argument is the name of the project
+% Third argument is the date/duration
+% Fourth argument is the name of the mentor(s)
 \newcommand{\emptyproject}[4][]  % optional link is by default empty
 {
     \textbf{#2} \hfill {\small #3}\\
@@ -28,7 +36,11 @@
 }
 
 % Miscellaneous options
-\hypersetup{colorlinks=true}  % do not draw boxes around links, color the links themselves
+\hypersetup{
+    colorlinks=true,  % do not draw boxes around links, color the links themselves
+    pdfsubject={Resume},
+    pdfkeywords={resume, cv}
+}
 \pagenumbering{gobble}  % hide page numbering
 
 \title{R. Harish - Resume}
