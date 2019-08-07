@@ -10,24 +10,25 @@
 \begin{itemize}
 
 \item \begin{project}{Research Intern, NYU Tandon}{May '19 - Present}{Prof. Paweł Korus, Prof. Nasir Memon}
-    \item Project on building a robust image hash that is immune to typical image transformations, while being sensitive to malicious image edits such as face swaps, deep fakes, object addition/deletion.
-    \item Constructed a binary hash, given an image, which would give lower \textit{Hamming distances} for hashes of similar images while giving more considerable distances for dissimilar images.
-    \item Tested various novel network architectures on different loss functions, notably the triplet loss, along with \textit{mining} of examples for improved training by targeting semi-hard examples, similar to \href{https://arxiv.org/abs/1503.03832}{\textit{FaceNet}}.
-    \item Tested the networks against adversarial attack methods such as \href{https://arxiv.org/abs/1412.6572}{\textit{FGSM}}, \href{https://arxiv.org/abs/1706.06083}{\textit{Projected Gradient Descent}}.
+    \item Researched robust image hashes that are immune to typical image transformations, while being sensitive to malicious image edits such as face swaps, deep fakes, object addition/deletion.
+    \item Constructed models that take an image and output a binary hash that would give lower \href{https://en.wikipedia.org/wiki/Hamming\_distance}{\textit{Hamming distances}} for hashes of similar images while giving more considerable distances for dissimilar images.
+    \item Developed a \textit{framework} for testing against transformations like compression, contrast changes, blurring, warping.
+    \item Trained various novel network architectures on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textit{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{\textit{mining}} of examples for improved training.
+    \item Tested the networks against \textit{adversarial attack} methods such as \href{https://arxiv.org/abs/1412.6572}{\textit{FGSM}}, \href{https://arxiv.org/abs/1706.06083}{\textit{Projected Gradient Descent}}.
 \end{project}
 
 \item \begin{project}[https://github.com/rharish101/Plasticity-Networks]{Research Intern (Remote), NYU Tandon}{May '18 - July '18}{Prof. Yao Wang}
-    \item Used \href{https://arxiv.org/abs/1804.02464}{\textit{differentiable plasticity}} for \textit{domain transfer} using CNNs.
+    \item Researched \href{https://arxiv.org/abs/1804.02464}{\textit{differentiable plasticity}} for \textit{domain transfer} in images using Convolutional Neural Networks.
     \item Tested three architectures on the \textit{Street View House Numbers (SVHN)} dataset: standard ResNet, ResNet with plasticity on the fully-connected layer and ResNet with plasticity on all layers, using 20 and 56 layer variants.
-    \item Modified the standard temporal update rule for the \textit{Hebbian matrix} (plastic weights) for convolutional layers by using \href{http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf}{transpose convolution} for an efficient method of obtaining the plasticity update.
-    \item Used models trained on the SVHN dataset for the MNIST dataset by keeping the convolutional layers as feature extractors, with notable improvement in classification accuracy for the 20 layer models due to full plasticity.
+    \item Improved \textit{efficiency} in the temporal update rule for the \textit{Hebbian weights} by using \href{http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf}{\textit{transpose convolution}}.% for convolutional layers.
+    \item Achieved notable improvement in classification accuracy for the 20 layer models using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
 \end{project}
 
 \item \begin{project}{Intern, Machine Learning Team, New York Office of IIT Kanpur}{May '17 - July '18}{Prof. Manindra Agrawal}
-    \item Created an online document vectorisation model based on the \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}} model.
-    \item Created an online clustering model using a fully-online \href{https://github.com/cloudwalkio/ddbscan}{modification of \textit{DBSCAN}} optimised for discrete data.
-    \item Created and trained a \href{https://arxiv.org/abs/1301.3781}{\textit{Word2Vec}} model to compare scraped articles using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{\textit{Word Mover's Distance}}.
-    \item Trained a character recognition CNN with sliding windows for English Optical Character Recognition (OCR).
+    \item Developed an \textit{online} text clustering model using a \href{https://github.com/cloudwalkio/ddbscan}{fully-online modification} of the \textit{DBSCAN} algorithm.
+    \item Implemented an \textit{online} document vectorisation model based on the \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}} model.
+    \item Developed a \href{https://arxiv.org/abs/1301.3781}{\textit{Word2Vec}} model to identify duplicate documents using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{\textit{Word Mover's Distance}} on word vectors.
+    \item Trained a Convolutional Neural Network with sliding windows for English Optical Character Recognition (OCR).
 \end{project}
 
 \end{itemize}
