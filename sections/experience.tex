@@ -10,25 +10,24 @@
 \begin{itemize}
 
 \item \begin{project}{Research Intern, NYU Tandon}{May '19 -- July '19}{Prof.\ Paweł Korus, Prof.\ Nasir Memon}%chktex 8
-    \item Researched \textit{robust image hashes} that are immune to typical image transformations, while being sensitive to malicious image edits such as face swaps, deep fakes, object addition/deletion.
-    \item Constructed models that take an image and output a binary hash that would give lower \href{https://en.wikipedia.org/wiki/Hamming\_distance}{Hamming distances} for hashes of similar images while giving more considerable distances for dissimilar images.
+    \item Researched \textit{robust image hashes} that are immune to typical image transformations, measured by \href{https://en.wikipedia.org/wiki/Hamming\_distance}{Hamming distances}, while being sensitive to malicious image edits such as face swaps, deep fakes, object addition/deletion.
     \item Developed a framework for testing against transformations like compression, contrast changes, blurring, warping.
-    \item Trained various novel network architectures on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textit{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{mining} of examples for improved training.
+    \item Constructed various novel network architectures that analyse images in both the spatial and frequency domains.
+    \item Trained models on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textit{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{mining} of examples for improved training.
     \item Tested the networks against \textit{adversarial attacks} such as \href{https://arxiv.org/abs/1412.6572}{FGSM}, \href{https://arxiv.org/abs/1706.06083}{Projected Gradient Descent}, \href{https://arxiv.org/abs/1712.04248}{Boundary Attack}.
 \end{project}
 
 \item \begin{project}[https://github.com/rharish101/Plasticity-Networks]{RTE Intern, NYU Tandon}{May '18 -- July '18}{Prof.\ Yao Wang}%chktex 8
-    \item Researched \href{https://arxiv.org/abs/1804.02464}{\textit{differentiable plasticity}} for \textit{domain transfer} in images using Convolutional Neural Networks.
-    \item Tested three architectures on the Street View House Numbers (SVHN) dataset: standard ResNet, ResNet with plasticity on the fully-connected layer and ResNet with plasticity on all layers, using 20 and 56 layer variants.
-    \item Improved efficiency in the temporal update rule for the Hebbian weights by using \href{http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf}{transpose convolution}.% for convolutional layers.
-    \item Achieved notable improvement in classification accuracy for the 20 layer models using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
+    \item Researched \href{https://arxiv.org/abs/1804.02464}{\textit{differentiable plasticity}} for \textit{domain transfer} in images using Convolutional Neural Networks (CNNs).
+    \item Improved efficiency in the temporal update rule for the Hebbian weights for convolutional layers.
+    \item Tested various ResNet-based architectures on the Street View House Numbers (SVHN) dataset.
+    \item Improved accuracy for smaller models using plasticity, when adapting models pre-trained on SVHN for MNIST.\@
 \end{project}
 
 \item \begin{project}{Intern, Machine Learning Team, New York Office of IIT Kanpur}{May -- July, 2017 \& 2018}{Prof.\ Manindra Agrawal}%chktex 8
     \item Developed an \textit{online} text clustering model using a \href{https://github.com/cloudwalkio/ddbscan}{fully-online modification} of the DBSCAN algorithm.
     \item Implemented an \textit{online} document vectorisation model based on the \href{https://arxiv.org/abs/1405.4053}{Distributed Memory paragraph vectors} model.
     \item Developed a \href{https://arxiv.org/abs/1301.3781}{Word2Vec} model to identify duplicate documents using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{Word Mover's Distance} on word vectors.
-    \item Trained a Convolutional Neural Network with sliding windows for English Optical Character Recognition (OCR).
 \end{project}
 
 \end{itemize}
