@@ -1,0 +1,40 @@
+name: Update resume PDF
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Update resume PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up git repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+      - name: Delete latest release
+        uses: ame-yu/action-delete-latest-release@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Delete release tag
+        run: |
+          git tag -d release
+          git push origin :release
+        continue-on-error: true # in case there's no existing release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create new release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: "Placeholder release for the latest build of my resume."
+          name: Latest
+          tag_name: release
+          files: resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
