@@ -7,6 +7,7 @@
 \usepackage{tabulary}  % for custom columns having auto width
 \usepackage{etoolbox}  % for patching tabulary
 \usepackage{booktabs}  % for good-looking table lines
+\usepackage{enumitem}  % for changing indentation of itemize
 
 % Patch for tabulary to have fixed width tables:
 % https://tex.stackexchange.com/a/87111/147074
@@ -56,6 +57,7 @@
     pdfkeywords={resume, cv}
 }
 \pagenumbering{gobble}  % hide page numbering
+\setlength\extrarowheight{3pt}  % add more vertical space for rows
 
 \title{R. Harish --- Resume}
 \author{Harish Rajagopal}
