@@ -1,4 +1,4 @@
-name: Update resume PDF
+name: Update resume PDFs
 
 on:
   push:
@@ -7,17 +7,19 @@ on:
 
 jobs:
   build:
-    name: Update resume PDF
+    name: Update resume PDFs
     runs-on: ubuntu-latest
     steps:
       - name: Set up git repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Compile LaTeX
+      - name: Compile LaTeX for all PDFs
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume.tex
+          root_file: |
+            resume.tex
+            onepage.tex
       - name: Delete latest release
         uses: ame-yu/action-delete-latest-release@v2
         with:
@@ -35,6 +37,8 @@ jobs:
           body: "Placeholder release for the latest build of my resume."
           name: Latest
           tag_name: release
-          files: resume.pdf
+          files: |
+            resume.pdf
+            onepage.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

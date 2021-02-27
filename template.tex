@@ -1,0 +1,116 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[margin=8mm]{geometry}  % for setting page margins
+\usepackage[gray]{xcolor}  % convert entire PDF to grayscale
+\usepackage[pdfusetitle]{hyperref}  % control hyperlink formatting and auto-add PDF metadata
+\usepackage{titlesec}  % for changing section styling
+\usepackage{fontawesome}  % for icons like GitHub, email, mobile, etc.
+\usepackage{tabulary}  % for custom columns having auto width
+\usepackage{etoolbox}  % for patching tabulary and for if-else
+\usepackage{booktabs}  % for good-looking table lines
+\usepackage{enumitem}  % for changing indentation of itemize
+\usepackage{multicol}  % for two-column layout
+
+% Patch for tabulary to have fixed width tables:
+% https://tex.stackexchange.com/a/87111/147074
+\makeatletter
+\patchcmd\TY@checkmin%
+{\def\TY@ratio{1}}
+{%
+    \@tempdima\dimexpr\p@*\TY@linewidth/\TY@tablewidth\relax
+    \edef\TY@ratio{\strip@pt\@tempdima}%
+}{}{}
+\let\TY@@checkmin\TY@checkmin%
+\makeatother
+
+% Switch to etoolbox from pure LaTeX because the latter sucks
+\newtoggle{onepage}
+\ifonepage%
+    \toggletrue{onepage}
+\else
+    \togglefalse{onepage}
+\fi
+
+% Custom styling for section
+\iftoggle{onepage}{\newcommand{\sectionskip}{-4mm}}{\newcommand{\sectionskip}{-2mm}}
+\titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{\sectionskip}}[\vspace{-3mm}\hrulefill\vspace{-2mm}]
+
+% Custom environment to be used for a single project, internship, etc.
+% First argument is an OPTIONAL link
+% Second argument is the name of the project
+% Third argument is the date/duration
+% Fourth argument is the name of the mentor(s)
+\newenvironment{project}[4][]  % optional link is by default empty
+{
+    \iftoggle{onepage}
+    {
+        \href{#1}{\color{black}{\textbf{#2}}}\\
+        \textit{\small #4} \hfill {\small #3}\\[-6mm]
+        \begin{itemize}[leftmargin=0mm,itemsep=0mm]%chktex 15
+    }
+    {
+        \textbf{#2} \hfill {\small #3}\\
+        \textit{\small #4} \hfill \href{#1}{\small #1}
+        \begin{itemize}%chktex 15
+    }
+}
+{
+    \end{itemize}
+}
+
+% Custom command to be used for an empty listing for a single project, internship, etc.
+% First argument is an OPTIONAL link
+% Second argument is the name of the project
+% Third argument is the date/duration
+% Fourth argument is the name of the mentor(s)
+\newcommand{\emptyproject}[4][]  % optional link is by default empty
+{%
+    \iftoggle{onepage}
+    {
+        \href{#1}{\color{black}{\textbf{#2}}}\\
+        \textit{\small #4} \hfill {\small #3}
+    }
+    {
+        \textbf{#2} \hfill {\small #3}\\
+        \textit{\small #4} \hfill \href{#1}{\small #1}
+    }
+}
+
+% Miscellaneous options
+\hypersetup{%
+    colorlinks=true,  % do not draw boxes around links, color the links themselves
+    pdfsubject={Resume},
+    pdfkeywords={resume, cv}
+}
+\pagenumbering{gobble}  % hide page numbering
+\setlength\extrarowheight{3pt}  % add more vertical space for rows
+
+\iftoggle{onepage}
+{
+    \setlength{\columnsep}{5mm}  % set separation between the two columns
+    \setitemize{leftmargin=5mm}  % changing indentation for itemize
+}{}
+
+\title{R. Harish --- Resume}
+\author{Harish Rajagopal}
+
+\begin{document}
+    \input{sections/common/header.tex}
+    \input{sections/common/qualifications.tex}
+
+    \iftoggle{onepage}
+    {
+        \begin{multicols}{2}
+        \newcommand{\dir}{onepage}
+    }
+    {\newcommand{\dir}{full}}
+
+    \input{sections/\dir/achievements.tex}
+    \input{sections/\dir/experience.tex}
+    \input{sections/\dir/projects.tex}
+    \input{sections/\dir/skills.tex}
+
+    \iftoggle{onepage}{\end{multicols}}{}
+
+    \input{sections/common/courses.tex}
+    \iftoggle{onepage}{}{\input{sections/\dir/responsibilities.tex}}
+\end{document}
