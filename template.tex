@@ -75,6 +75,10 @@
     }
 }
 
+% Custom command to display its contents only in certain modes (full/single-page)
+\newcommand{\iffull}[1]{\iftoggle{onepage}{}{#1}}
+\newcommand{\ifsingle}[1]{\iftoggle{onepage}{#1}{}}
+
 % Miscellaneous options
 \hypersetup{%
     colorlinks=true,  % do not draw boxes around links, color the links themselves
@@ -94,23 +98,18 @@
 \author{Harish Rajagopal}
 
 \begin{document}
-    \input{sections/common/header.tex}
-    \input{sections/common/qualifications.tex}
+    \input{sections/header.tex}
+    \input{sections/qualifications.tex}
 
-    \iftoggle{onepage}
-    {
-        \begin{multicols}{2}
-        \newcommand{\dir}{onepage}
-    }
-    {\newcommand{\dir}{full}}
+    \ifsingle{\begin{multicols}{2}}
 
-    \input{sections/\dir/achievements.tex}
-    \input{sections/\dir/experience.tex}
-    \input{sections/\dir/projects.tex}
-    \input{sections/\dir/skills.tex}
+    \input{sections/achievements.tex}
+    \input{sections/experience.tex}
+    \input{sections/projects.tex}
+    \input{sections/skills.tex}
 
-    \iftoggle{onepage}{\end{multicols}}{}
+    \ifsingle{\end{multicols}}
 
-    \input{sections/common/courses.tex}
-    \iftoggle{onepage}{}{\input{sections/\dir/responsibilities.tex}}
+    \input{sections/courses.tex}
+    \iffull{\input{sections/responsibilities.tex}}
 \end{document}

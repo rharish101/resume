@@ -9,9 +9,6 @@ The file [`resume.tex`](resume.tex) is the target for the full resume.
 The file [`onepage.tex`](onepage.tex) is the target for the single page version.
 
 The main content of the resume is stored in TeX files located in the [sections](sections/) directory.
-Inside this directory, the [common](sections/common) sub-directory contains the content common to both versions.
-The [full](sections/full) sub-directory contains the content for the full resume, while the [onepage](sections/onepage) sub-directory contains the content optimized for the single page version.
-
 The file [`template.tex`](template.tex) defines the template, the custom commands and environments used by the content TeX files.
 
 ## Compilation
