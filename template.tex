@@ -1,3 +1,4 @@
+%chktex-file 15
 \documentclass[10pt, a4paper]{article}
 \usepackage[margin=8mm]{geometry}  % for setting page margins
 \usepackage[gray]{xcolor}  % convert entire PDF to grayscale
@@ -45,12 +46,12 @@
     {
         \href{#1}{\color{black}{\textbf{#2}}}\\
         \textit{\small #4} \hfill {\small #3}\\[-6mm]
-        \begin{itemize}[leftmargin=0mm,itemsep=0mm]%chktex 15
+        \begin{itemize}[leftmargin=0mm,itemsep=0mm]
     }
     {
         \textbf{#2} \hfill {\small #3}\\
         \textit{\small #4} \hfill \href{#1}{\small #1}
-        \begin{itemize}%chktex 15
+        \begin{itemize}
     }
 }
 {
