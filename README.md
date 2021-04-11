@@ -2,6 +2,10 @@
 
 This repository contains the content of my resume and its LaTeX template.
 
+Here are the latest versions of the PDFs:
+- [resume.pdf](https://github.com/rharish101/resume/releases/latest/download/resume.pdf) - The full resume
+- [onepage.pdf](https://github.com/rharish101/resume/releases/latest/download/onepage.pdf) - The shortened single-page resume
+
 ## Organization
 This resume consists of two "formats".
 One is the standard resume, while the other is a single page version of the same.
