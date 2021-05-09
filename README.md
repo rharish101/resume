@@ -9,8 +9,6 @@ Here are the latest versions of the PDFs:
 ## Organization
 This resume consists of two "formats".
 One is the standard resume, while the other is a single page version of the same.
-The file [`resume.tex`](resume.tex) is the target for the full resume.
-The file [`onepage.tex`](onepage.tex) is the target for the single page version.
 
 The main content of the resume is stored in TeX files located in the [sections](sections/) directory.
 The file [`template.tex`](template.tex) defines the template, the custom commands and environments used by the content TeX files.
@@ -18,12 +16,16 @@ The file [`template.tex`](template.tex) defines the template, the custom command
 ## Compilation
 Compile the full resume with:
 ```sh
-latexmk resume.tex
+make
+```
+or
+```sh
+make full
 ```
 
 Compile the single page version with:
 ```sh
-latexmk onepage.tex
+make onepage
 ```
 
 ## Generated PDFs

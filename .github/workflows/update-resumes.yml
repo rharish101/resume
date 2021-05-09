@@ -15,11 +15,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Compile LaTeX for all PDFs
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/texlive-action/full@v1
         with:
-          root_file: |
-            resume.tex
-            onepage.tex
+          run: |
+            apk add make
+            make all
       - name: Delete latest release
         uses: ame-yu/action-delete-latest-release@v2
         with:
