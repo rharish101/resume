@@ -3,15 +3,15 @@
 all: full onepage
 
 full: template.tex
-	latexmk -usepretex='\newif\ifonepage \onepagefalse' -jobname='resume' template.tex
+	latexmk -usepretex='\newif\ifonepage \onepagefalse' -jobname='full' template.tex
 
 onepage: template.tex
-	latexmk -usepretex='\newif\ifonepage \onepagetrue' -jobname='onepage' template.tex
+	latexmk -usepretex='\newif\ifonepage \onepagetrue' -jobname='resume' template.tex
 
 clean:
+	latexmk -jobname='full' -c
 	latexmk -jobname='resume' -c
-	latexmk -jobname='onepage' -c
 
 clean-all:
+	latexmk -jobname='full' -C
 	latexmk -jobname='resume' -C
-	latexmk -jobname='onepage' -C

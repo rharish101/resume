@@ -39,6 +39,6 @@ jobs:
           tag_name: release
           files: |
             resume.pdf
-            onepage.pdf
+            full.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

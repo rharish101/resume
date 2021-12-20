@@ -3,29 +3,29 @@
 This repository contains the content of my resume and its LaTeX template.
 
 Here are the latest versions of the PDFs:
-- [resume.pdf](https://github.com/rharish101/resume/releases/latest/download/resume.pdf) - The full resume
-- [onepage.pdf](https://github.com/rharish101/resume/releases/latest/download/onepage.pdf) - The shortened single-page resume
+- [resume.pdf](https://github.com/rharish101/resume/releases/latest/download/resume.pdf) - The single-page resume
+- [full.pdf](https://github.com/rharish101/resume/releases/latest/download/full.pdf) - The full two-page resume
 
 ## Organization
 This resume consists of two "formats".
-One is the standard resume, while the other is a single page version of the same.
+One is the standard one-page resume, while the other is a full two-page version of the same.
 
 The main content of the resume is stored in TeX files located in the [sections](sections/) directory.
 The file [`template.tex`](template.tex) defines the template, the custom commands and environments used by the content TeX files.
 
 ## Compilation
-Compile the full resume with:
+Compile the standard resume with:
 ```sh
 make
 ```
 or
 ```sh
-make full
+make onepage
 ```
 
-Compile the single page version with:
+Compile the full version with:
 ```sh
-make onepage
+make full
 ```
 
 ## Generated PDFs
