@@ -11,6 +11,10 @@
 \begin{itemize}
 \ifsingle{\setlength{\itemsep}{0mm}}
 
+\item \begin{project}{Learning Rate Schedulers and Generalization}{Sep '21 -- present}{Prof.\ Thomas Hofmann}%chktex 8
+    \item Ongoing semester project to investigate the effects of various learning rate schedules for deep learning optimizers towards generalization.
+\end{project}
+
 \item \begin{project}[https://github.com/rharish101/DeFMO/]{Deblurring by Synthesizing Blur}{Feb '21 -- June '21}{Prof.\ Marc Pollefeys}%chktex 8
     \item Semester project to remove motion blur of Fast Moving Objects (FMOs) in images and videos.
     \iffull{\item A Convolutional Neural Network de-blurs individual frames as well as generates `sub-frames', as if captured by a high-speed camera (i.e.\ temporal super-resolution).}
@@ -23,18 +27,19 @@
     \item The user's interaction is used to obtain as well as to modify the latent space mapping as required.
 \end{project}
 
-\item \begin{project}[https://arxiv.org/abs/2004.09803]{CovidAID:\ COVID-19 Detection Using\iffull{ Chest} X-Rays}{Apr '20 -- Aug '20}{Prof.\ Vinay Namboodiri, Prof.\ Chetan Arora\iffull{, Prof.\ Krithika Rangarajan}}%chktex 8
-    \item Developed a \href{}{CheXNet}-based CNN model to classify chest X-rays with an Imbalance Ratio of 45.3:1 for COVID-19.
-    \item Improved significantly upon the results of \href{https://github.com/JordanMicahBennett/SMART-CT-SCAN_BASED-COVID19_VIRUS_DETECTOR}{Covid-Net} with \textbf{90.5\% accuracy and 100\% recall} for COVID-19.
-    \item Researched \textbf{multi-modal} models \iftoggle{onepage}{to use}{that can leverage} patient metadata\iffull{ to improve diagnosis}.
-\end{project}
-
 \iftoggle{onepage}
 {
+    \item \emptyproject[https://arxiv.org/abs/2004.09803]{CovidAID:\ COVID-19 Detection Using\iffull{ Chest} X-Rays}{Apr '20 -- Aug '20}{Prof.\ Vinay Namboodiri, Prof.\ Chetan Arora\iffull{, Prof.\ Krithika Rangarajan}}%chktex 8
     \item \emptyproject[https://github.com/rharish101/UGP1/]{Multi-Agent GANs for Image Super-Resolution}{Aug '18 -- Dec '18}{Prof.\ Vinay Namboodiri}%chktex 8
     \item \emptyproject[https://github.com/rharish101/eye-in-the-sky]{7\textsuperscript{th} Inter-IIT Tech Meet (Silver Medal)}{Dec '18}{IIT Kanpur Contingent}
 }
 {
+    \item \begin{project}[https://arxiv.org/abs/2004.09803]{CovidAID:\ COVID-19 Detection Using\iffull{ Chest} X-Rays}{Apr '20 -- Aug '20}{Prof.\ Vinay Namboodiri, Prof.\ Chetan Arora\iffull{, Prof.\ Krithika Rangarajan}}%chktex 8
+        \item Developed a \href{}{CheXNet}-based CNN model to classify chest X-rays with an Imbalance Ratio of 45.3:1 for COVID-19.
+        \item Improved significantly upon the results of \href{https://github.com/JordanMicahBennett/SMART-CT-SCAN_BASED-COVID19_VIRUS_DETECTOR}{Covid-Net} with \textbf{90.5\% accuracy and 100\% recall} for COVID-19.
+        \item Researched \textbf{multi-modal} models \iftoggle{onepage}{to use}{that can leverage} patient metadata\iffull{ to improve diagnosis}.
+    \end{project}
+
     \item \begin{project}[https://github.com/rharish101/UGP1/]{Multi-Agent GANs for Image Super-Resolution}{Aug '18 -- Dec '18}{Prof.\ Vinay Namboodiri}%chktex 8
         \item A \textbf{Multi-agent generalisation} of \href{https://arxiv.org/abs/1609.04802}{SRGAN} inspired by \href{http://openaccess.thecvf.com/content_cvpr_2018/papers_backup/Ghosh_Multi-Agent_Diverse_Generative_CVPR_2018_paper.pdf}{MADGANs} for image super-resolution in TensorFlow.
         \item Four generators (with shared lower layers) get the four corner sections of the input (with a slight overlap), and their outputs are joined (negating the overlap) to get the final high-resolution image.
