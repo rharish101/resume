@@ -21,10 +21,13 @@ jobs:
           run: |
             apk add make
             make all
-      - name: Delete latest release
-        uses: ame-yu/action-delete-latest-release@v2
+      - uses: actions/github-script@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { owner, repo } = context.repo
+            const { data: { id } } = await github.repos.getLatestRelease({ owner, repo })
+            await github.repos.deleteRelease({ owner, repo, release_id: id })
       - name: Delete release tag
         run: |
           git tag -d release
