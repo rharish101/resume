@@ -23,6 +23,7 @@ jobs:
             make all
       - name: Delete placeholder release
         uses: actions/github-script@v6
+        continue-on-error: true # in case there's no existing release
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
