@@ -10,6 +10,10 @@
 \usepackage{booktabs}  % for good-looking table lines
 \usepackage{enumitem}  % for changing indentation of itemize
 \usepackage{multicol}  % for two-column layout
+\usepackage{fontspec}  % for changing the default font
+
+% Use the TeX Gyre Pagella font, similar to Palatino
+\setmainfont{TeX Gyre Pagella}
 
 % Define colours
 \definecolor{accent}{HTML}{888888}
@@ -51,7 +55,7 @@
 
 % Custom styling for itemize
 \setlist[itemize,1]{leftmargin=0mm,label={}}
-\setlist[itemize,2]{label=\textbullet}
+\setlist[itemize,2]{label={\footnotesize\textbullet}}
 
 % Custom environment to be used for a single project, internship, etc.
 % First argument is an OPTIONAL link
