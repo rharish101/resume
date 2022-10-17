@@ -1,7 +1,7 @@
 %chktex-file 15
 \documentclass[10pt, a4paper]{article}
 \usepackage[margin=8mm]{geometry}  % for setting page margins
-\usepackage[gray]{xcolor}  % convert entire PDF to grayscale
+\usepackage{xcolor,colortbl}  % for setting colours
 \usepackage[pdfusetitle]{hyperref}  % control hyperlink formatting and auto-add PDF metadata
 \usepackage{titlesec}  % for changing section styling
 \usepackage{fontawesome5}  % for icons like GitHub, email, mobile, etc.
@@ -10,6 +10,20 @@
 \usepackage{booktabs}  % for good-looking table lines
 \usepackage{enumitem}  % for changing indentation of itemize
 \usepackage{multicol}  % for two-column layout
+
+% Define colours
+\definecolor{accent}{HTML}{888888}
+\definecolor{headings}{HTML}{000000}
+\definecolor{text}{HTML}{444444}
+\definecolor{misc}{HTML}{888888}
+\definecolor{background}{HTML}{ffffff}
+
+% Custom command for headings
+\newcommand{\heading}[1]{\textcolor{headings}{\textbf{#1}}}
+
+% Set global colours
+\color{text}
+\pagecolor{background}
 
 % Patch for tabulary to have fixed width tables:
 % https://tex.stackexchange.com/a/87111/147074
@@ -33,7 +47,7 @@
 
 % Custom styling for section
 \iftoggle{onepage}{\newcommand{\sectionskip}{-3mm}}{\newcommand{\sectionskip}{-2mm}}
-\titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{\sectionskip}}[\vspace{-4mm}\hrulefill\vspace{-2mm}]
+\titleformat{\section}{\Large\scshape\color{headings}}{\thesection}{2mm}{\vspace{\sectionskip}}[\vspace{-4mm}\hrulefill\vspace{-2mm}]
 
 % Custom styling for itemize
 \setlist[itemize,1]{leftmargin=0mm,label={}}
@@ -48,13 +62,13 @@
 {
     \iftoggle{onepage}
     {
-        \href{#1}{\color{black}{\textbf{#2}}}\\
-        \textit{\small #4} \hfill{\small #3}\\[-6mm]
+        \href{#1}{\heading{#2}}\\
+        \textcolor{misc}{\textit{\small #4} \hfill{\small #3}}\\[-6mm]
         \begin{itemize}[itemsep=0mm]
     }
     {
-        \textbf{#2} \hfill{\small #3}\\
-        \textit{\small #4} \hfill\href{#1}{\small #1}\par
+        \heading{#2} \hfill{\small #3}\\
+        \textcolor{misc}{\textit{\small #4} \hfill\href{#1}{\small #1}}\par
         \begin{itemize}
     }
 }
@@ -71,12 +85,12 @@
 {%
     \iftoggle{onepage}
     {
-        \href{#1}{\color{black}{\textbf{#2}}}\\
-        \textit{\small #4} \hfill{\small #3}\par
+        \href{#1}{\heading{#2}}\\
+        \textcolor{misc}{\textit{\small #4} \hfill{\small #3}}\par
     }
     {
-        \textbf{#2} \hfill{\small #3}\\
-        \textit{\small #4} \hfill\href{#1}{\small #1}\par
+        \heading{#2} \hfill{\small #3}\\
+        \textcolor{misc}{\textit{\small #4} \hfill\href{#1}{\small #1}}\par
     }
 }
 
@@ -87,6 +101,7 @@
 % Miscellaneous options
 \hypersetup{%
     colorlinks=true,  % do not draw boxes around links, color the links themselves
+    urlcolor=accent,
     pdfsubject={Resume},
     pdfkeywords={resume, cv}
 }
