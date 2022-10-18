@@ -63,12 +63,12 @@
     \iftoggle{onepage}
     {
         \href{#1}{\heading{#2}}\\
-        \textcolor{misc}{\textit{\small #4} \hfill{\small #3}}\\[-6mm]
+        \textcolor{misc}{\textit{\small #4\hfill#3}}\\[-6mm]
         \begin{itemize}[itemsep=0mm]
     }
     {
         \heading{#2} \hfill{\small #3}\\
-        \textcolor{misc}{\textit{\small #4} \hfill\href{#1}{\small #1}}\par
+        \textcolor{misc}{\textit{\small #4 \hfill\href{#1}{#1}}}\par
         \begin{itemize}
     }
 }
@@ -86,11 +86,11 @@
     \iftoggle{onepage}
     {
         \href{#1}{\heading{#2}}\\
-        \textcolor{misc}{\textit{\small #4} \hfill{\small #3}}\par
+        \textcolor{misc}{\textit{\small #4\hfill#3}}\par
     }
     {
         \heading{#2} \hfill{\small #3}\\
-        \textcolor{misc}{\textit{\small #4} \hfill\href{#1}{\small #1}}\par
+        \textcolor{misc}{\textit{\small #4\hfill\href{#1}{#1}}}\par
     }
 }
 
