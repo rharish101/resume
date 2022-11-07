@@ -13,7 +13,6 @@
     \item Researched \textbf{robust image hashes} that are immune to typical image transformations,\iffull{ measured by \href{https://en.wikipedia.org/wiki/Hamming\_distance}{Hamming distances},} while being sensitive to malicious image edits such as face swaps,\iffull{ object addition/deletion,} \& deep fakes.
     \item Developed a framework for testing against\iffull{ transformations like} compression, contrast changes,\ifsingle{ gamma,} blurring, warping.
     \iffull{
-        \item Constructed various novel network architectures that analyse images in both the spatial and frequency domains.
         \item Trained models on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textbf{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{mining} of examples for improved training.
         \item Tested networks against \textbf{adversarial attacks} like \href{https://arxiv.org/abs/1412.6572}{FGSM}, \href{https://arxiv.org/abs/1706.06083}{Projected Gradient Descent}, \href{https://arxiv.org/abs/1712.04248}{Boundary Attack}.
     }
@@ -32,7 +31,6 @@
     \item Developed an \textbf{online text clustering} model using a \href{https://github.com/cloudwalkio/ddbscan}{fully-online modification} of the DBSCAN algorithm.
     \iffull{
         \item Implemented an \textbf{online document vectorisation} model using \href{https://arxiv.org/abs/1405.4053}{Distributed Memory paragraph vectors}.
-        \item Integrated Apache Kafka with the model for efficient stream implementations of the input-output pipeline.
     }
     \item Developed a \href{https://arxiv.org/abs/1301.3781}{Word2Vec} model to identify duplicate documents using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{Word Mover's Distance} on word vectors.
 \end{project}
