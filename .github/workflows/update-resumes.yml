@@ -43,6 +43,8 @@ jobs:
           body: "Placeholder release for the latest build of my resume."
           name: Latest
           tag_name: release
+          draft: false
+          prerelease: false
           files: |
             resume.pdf
             full.pdf
