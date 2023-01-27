@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Harish's Resume
+Upstream-Contact: Harish Rajagopal <harish.rajagopals@gmail.com>
+Source: https://github.com/rharish101/resume/
+
+Files: pic.jpg
+Copyright: 2022 Harish Rajagopal <harish.rajagopals@gmail.com>
+License: CC-BY-NC-ND-4.0

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2019 Harish Rajagopal <harish.rajagopals@gmail.com>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 # My Resume
 
 This repository contains the content of my resume and its LaTeX template.
@@ -34,3 +40,10 @@ This is set up to maintain only one single release, pointing to the latest commi
 The compiled PDFs will be available in this release as release assets.
 Thus, a URL to any of those PDFs will stay the same across multiple commits, while always linking to the latest PDFs.
 This is done to avoid tracking the binary PDFs in git.
+
+## Licenses
+This repository uses [REUSE](https://reuse.software/) to document licenses.
+Each file either has a header containing copyright and license information, or has an entry in the [DEP5 file](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/) at [.reuse/dep5](./.reuse/dep5).
+The license files that are used in this project can be found in the [LICENSES](./LICENSES) directory.
+
+A copy of the GPL-3.0-or-later license is placed in [LICENSE](./LICENSE), to signify that it constitutes the majority of the codebase, and for compatibility with GitHub.
