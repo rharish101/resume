@@ -102,6 +102,20 @@
     }
 }
 
+% Custom command which uses the `project` environment in full mode, and `\emptyproject` in single-page mode.
+% The first four arguments are the same as `project` and `\emptyproject`.
+% The fifth argument is the body.
+\newcommand{\slimproject}[5][]
+{
+    \iftoggle{onepage}
+    {\emptyproject[#1]{#2}{#3}{#4}}
+    {
+        \begin{project}[#1]{#2}{#3}{#4}
+            #5
+        \end{project}
+    }
+}
+
 % Custom command to display its contents only in certain modes (full/single-page)
 \newcommand{\iffull}[1]{\iftoggle{onepage}{}{#1}}
 \newcommand{\ifsingle}[1]{\iftoggle{onepage}{#1}{}}
