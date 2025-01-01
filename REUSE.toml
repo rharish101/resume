@@ -1,0 +1,9 @@
+version = 1
+SPDX-PackageName = "Harish's Resume"
+SPDX-PackageSupplier = "Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/rharish101/resume/"
+
+[[annotations]]
+path = "pic.jpg"
+SPDX-FileCopyrightText = "2022 Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-License-Identifier = "CC-BY-NC-ND-4.0"
